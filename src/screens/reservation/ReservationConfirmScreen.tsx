@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { ReservationStackParamList } from '../../navigation/types';
+import { colors } from '../../theme';
 
 type Props = NativeStackScreenProps<ReservationStackParamList, 'ReservationConfirm'>;
 
@@ -17,5 +18,5 @@ export function ReservationConfirmScreen({ route }: Props) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  text: { fontSize: 16, color: '#666' },
+  text: { fontSize: 16, color: colors.textSecondary },
 });

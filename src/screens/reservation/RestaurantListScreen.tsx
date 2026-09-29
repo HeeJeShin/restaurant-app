@@ -3,6 +3,7 @@ import { ActivityIndicator, FlatList, StyleSheet, Text, TouchableOpacity, View }
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useRestaurantsQuery } from '../../queries/restaurants/useRestaurantsQuery';
 import type { ReservationStackParamList } from '../../navigation/types';
+import { colors, spacing } from '../../theme';
 
 type Props = NativeStackScreenProps<ReservationStackParamList, 'RestaurantList'>;
 
@@ -36,8 +37,8 @@ export function RestaurantListScreen({ navigation }: Props) {
 
 const styles = StyleSheet.create({
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  list: { padding: 16 },
-  row: { paddingVertical: 12, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: '#ddd' },
+  list: { padding: spacing.lg },
+  row: { paddingVertical: spacing.md, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: colors.border },
   name: { fontSize: 16, fontWeight: '600' },
-  category: { fontSize: 13, color: '#888', marginTop: 2 },
+  category: { fontSize: 13, color: colors.textMuted, marginTop: 2 },
 });

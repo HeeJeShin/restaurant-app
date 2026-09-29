@@ -1,6 +1,7 @@
 import React from 'react';
 import { ActivityIndicator, FlatList, StyleSheet, Text, View } from 'react-native';
 import { useReservationsQuery } from '../../queries/reservations/useReservationsQuery';
+import { colors, spacing } from '../../theme';
 
 export function MyReservationsScreen() {
   const { data, isLoading } = useReservationsQuery();
@@ -32,8 +33,8 @@ export function MyReservationsScreen() {
 
 const styles = StyleSheet.create({
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  list: { padding: 16 },
-  row: { paddingVertical: 12, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: '#ddd' },
+  list: { padding: spacing.lg },
+  row: { paddingVertical: spacing.md, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: colors.border },
   name: { fontSize: 16, fontWeight: '600' },
-  meta: { fontSize: 13, color: '#888', marginTop: 2 },
+  meta: { fontSize: 13, color: colors.textMuted, marginTop: 2 },
 });

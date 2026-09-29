@@ -8,6 +8,7 @@ import { ReservationFormScreen } from '../../screens/reservation/ReservationForm
 import { ReservationConfirmScreen } from '../../screens/reservation/ReservationConfirmScreen';
 import { MyReservationsScreen } from '../../screens/reservation/MyReservationsScreen';
 import type { ReservationStackParamList } from '../types';
+import { colors } from '../../theme';
 
 const Stack = createNativeStackNavigator<ReservationStackParamList>();
 
@@ -47,5 +48,5 @@ export function ReservationStackNavigator() {
 }
 
 const styles = StyleSheet.create({
-  headerButtonText: { color: '#007AFF' },
+  headerButtonText: { color: colors.primary },
 });

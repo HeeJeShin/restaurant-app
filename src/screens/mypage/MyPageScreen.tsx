@@ -3,6 +3,7 @@ import { Button, StyleSheet, View } from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { MyPageStackParamList } from '../../navigation/types';
 import { useAuthStore } from '../../stores/useAuthStore';
+import { spacing } from '../../theme';
 
 type Props = NativeStackScreenProps<MyPageStackParamList, 'MyPage'>;
 
@@ -21,5 +22,5 @@ export function MyPageScreen({ navigation }: Props) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 16 },
+  container: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: spacing.lg },
 });

@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { colors } from '../theme';
 
 type PlaceholderScreenProps = {
   title: string;
@@ -21,6 +22,6 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 16,
-    color: '#666',
+    color: colors.textSecondary,
   },
 });
